@@ -25,11 +25,11 @@ jobs:
   job3:
     name: JOb3
     needs : job1
-    runs-on: ubuntu-latest
+    runs-on: window-latest
     steps:
       - name: Job with single dependency
         run: sleep 10
-      - name: window-latest
+      - name: Checking runner info
         shell: pwsh
         run: get-computerinfo
   job4:
