@@ -22,4 +22,17 @@ jobs:
             echo "Hi from tester"
             echo " current time is `date` "
             sleep 20
-    
+  job3:
+    name: JOb3
+    need : job 1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job with single dependency
+        run: sleep 10
+   job4:
+    name : JOB4
+    need : [job 1,job2,job3]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job with single dependency
+        run: sleep 10      
