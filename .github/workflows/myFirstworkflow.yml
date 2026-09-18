@@ -9,3 +9,17 @@ jobs:
         run: echo "My first command in git action"
       - name: Checking the OS Release for gitHub
         run: cat /etc/os-release
+      - name: calling sleep
+        run: sleep 20
+  job2:
+    name: JOB2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking the host name for Runner
+        run: hostname
+      - name: Running the multiple commands
+        run: |
+            echo "Hi from tester"
+            echo " current time is `date` "
+            sleep 20
+    
