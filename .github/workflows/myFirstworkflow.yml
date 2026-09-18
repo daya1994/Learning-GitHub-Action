@@ -7,4 +7,5 @@ jobs:
     steps:
       - name: Running single command in Job1
         run: echo "My first command in git action"
-  
+      - name: Checking the OS Release for gitHub
+        run: cat /etc/os-realease
