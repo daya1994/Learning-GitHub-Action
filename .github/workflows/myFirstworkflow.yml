@@ -1,0 +1,10 @@
+name: my-Firstworkflow
+on: push
+jobs:
+  job1:
+    name: JOB1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running single command in Job1
+        run: echo "My first command in git action"
+  
